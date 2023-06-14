@@ -1,7 +1,16 @@
 {
-    "name": "sample-obsidian-theme",
-    "version": "1.0.0",
+	"name": "sample-obsidian-theme",
+	"version": "0.0.1",
 	"scripts": {
-		"version": "node version-bump.mjs && git add manifest.json versions.json"
+		"version": "node version-bump.mjs && git add manifest.json versions.json",
+		"build": "sass src/index.scss ./theme.css",
+		"lint:fix": "prettier -w ./src",
+		"lint:check": "prettier -c ./src"
+	},
+	"dependencies": {
+		"sass": "^1.26.10"
+	},
+	"devDependencies": {
+		"prettier": "^2.1.2"
 	}
 }

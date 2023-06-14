@@ -1,0 +1,27 @@
+@import "../../colors.scss";
+
+.prompt {
+  background-color: $gray-3;
+  border: 1px solid $gray-1;
+
+  .prompt-input {
+    font-size: var(--font-prompt-size);
+  }
+
+  .prompt-results {
+    .suggestion-item {
+      padding: 8px 10px 8px 34px;
+      font-size: var(--font-prompt-size);
+      margin-right: 2px;
+
+      &.is-selected {
+        background-color: $gray-5;
+      }
+    }
+  }
+
+  .prompt-instructions {
+    border-top: 1px solid $gray-1;
+    color: $indigo;
+  }
+}

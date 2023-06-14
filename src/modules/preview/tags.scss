@@ -1,0 +1,44 @@
+@import "../../colors.scss";
+
+@mixin base-tag {
+  font-size: var(--font-tag-preview-size);
+  font-weight: 900;
+  background-color: $gray-1;
+  padding: 3px 5px;
+  border-radius: 5px;
+  letter-spacing: -0.05ch;
+}
+
+@mixin status-tag($content) {
+  font-size: 0;
+  padding: 0;
+
+  &:after {
+    @include base-tag();
+    content: $content;
+  }
+}
+
+.tag {
+  @include base-tag();
+}
+
+.tag[href="#drafting"] {
+  @include status-tag("◩ DRAFTING");
+}
+
+.tag[href="#complete"] {
+  @include status-tag("◼ COMPLETE");
+}
+
+.tag[href="#archived"] {
+  @include status-tag("◻ ARCHIVED");
+}
+
+.tag[href="#seedling"] {
+  @include status-tag("🌱 SEEDLING");
+}
+
+.tag[href="#evergreen"] {
+  @include status-tag("🌲 EVERGREEN");
+}

@@ -1,0 +1,81 @@
+@import "./colors.scss";
+
+:root {
+  --default-font: "Inter", sans-serif;
+  --font-monospace: "Jetbrains Mono", monospace;
+
+  --font-editor-size: 1em;
+  --font-editor-linenumbers-size: medium;
+
+  --font-h1-preview-size: 2em;
+  --font-h2-preview-size: 1.5em;
+  --font-h3-preview-size: 1.25em;
+  --font-h4-preview-size: 1em;
+  --font-h5-preview-size: 0.875em;
+  --font-h6-preview-size: 0.85em;
+  --font-math-preview-size: 1.126em;
+  --font-tag-preview-size: 0.9em;
+  --font-hover-preview-size: 0.9em;
+  --font-prompts-size: 0.875em;
+
+  --font-todoist-title-size: 1em;
+  --font-todoist-metadata-size: small;
+}
+
+.theme-dark {
+  --background-code: #{$gray-4};
+  --background-code-preview: #{$gray-4};
+  --background-preview: #{$gray-4};
+  --background-primary: #{$gray-4};
+  --background-primary-alt: #{$gray-4};
+  --background-secondary: #{$gray-3};
+  --background-secondary-alt: #{$gray-3};
+
+  --background-tag: #{$gray-1};
+  --background-quick: #{$gray-2};
+
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+  --background-modifier-border: #{$gray-3};
+  --background-modifier-form-field: #{$gray-2};
+  --background-modifier-form-field-highlighted: #{$gray-3};
+
+  --interactive-hover: #{$gray-5};
+  --interactive-accent: #{$gray-6};
+  --interactive-accent-rgb: 68, 74, 115; // RGB version of $cyan.
+  --interactive-accent-hover: #{$gray-7};
+
+  --scrollbar-bg: inherit;
+  --scrollbar-thumb-bg: #{$gray-5};
+  --scrollbar-active-thumb-bg: #{$gray-6};
+
+  --table-line: #{$text-dark};
+
+  --text-accent: #{$aqua};
+  --text-accent-hover: #{rgba($aqua, 0.8)};
+  --text-faint: #{$text-dark};
+  --text-highlight: #{$yellow};
+  --text-highlight-bg: #{rgba($teal-alt, 0.3)};
+  --text-muted: #{$text-gray};
+  --text-normal: #{$text-primary};
+  --text-on-accent: #{$text-light};
+  --text-selection: #{rgba($pink, 0.2)};
+  --text-tag: #{$indigo};
+  --text-error: #{$light-red};
+
+  --file-hr: #{$gray-8};
+  --leaf-handle: #{$gray-8};
+
+  --italic-color: #{$yellow};
+
+  --bold-color: #{$orange};
+
+
+}
+
+@import "./modules/editor/index.scss";
+@import "./modules/preview/index.scss";
+@import "./modules/preview-export/index.scss";
+@import "./modules/ui/index.scss";
+
+@import "./modules/extensions/calendar.scss";
+@import "./modules/extensions/todoist.scss";

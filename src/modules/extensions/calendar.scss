@@ -1,0 +1,14 @@
+/* Support for https://github.com/liamcain/obsidian-calendar-plugin */
+
+@import "../../colors.scss";
+
+#calendar-container {
+  --color-text-today: #{$green};
+  --color-text-weeknum: #{rgba($indigo, 0.8)};
+  --color-arrow: #{$indigo};
+  --color-dot: #{rgba($green, 0.5)};
+
+  .year {
+    color: $indigo;
+  }
+}
